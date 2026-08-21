@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
           className="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white leading-[1.15] drop-shadow-md"
         >
           Baking Quetta&apos;s <br className="hidden sm:inline" />
-          <span className="text-amber-400 underline decoration-amber-500/60 decoration-wavy">
+          <span className="text-amber-400">
             Memories
           </span>
         </motion.h1>
