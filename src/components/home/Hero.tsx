@@ -38,8 +38,8 @@ export const Hero: React.FC = () => {
   }, []);
 
   const handleTimeUpdate = () => {
-    // Only play the starting 3.5 seconds scene (the chocolate glaze/glasses portion) and loop back smoothly
-    if (videoRef.current && videoRef.current.currentTime >= 3.5) {
+    // Cut video at 2.0 seconds to show ONLY the starting 3 glasses scene and remove the rest of the video
+    if (videoRef.current && videoRef.current.currentTime >= 2.0) {
       videoRef.current.currentTime = 0;
       videoRef.current.play().catch(() => {});
     }
