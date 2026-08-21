@@ -37,6 +37,14 @@ export const Hero: React.FC = () => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
+  const handleTimeUpdate = () => {
+    // Only play the starting 3.5 seconds scene (the chocolate glaze/glasses portion) and loop back smoothly
+    if (videoRef.current && videoRef.current.currentTime >= 3.5) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
+  };
+
   const handleVideoEnded = () => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
@@ -56,6 +64,7 @@ export const Hero: React.FC = () => {
             muted
             loop
             playsInline
+            onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnded}
             poster="/images/hero/hero-fallback.jpg"
             className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-95"
