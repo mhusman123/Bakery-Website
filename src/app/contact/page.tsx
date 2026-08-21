@@ -135,7 +135,7 @@ export default function ContactPage() {
                   />
                   <Input
                     label="Phone Number"
-                    placeholder="0333 1234567"
+                    placeholder="0304 8844719"
                     value={form.phone}
                     onChange={e => setForm({ ...form, phone: e.target.value })}
                   />

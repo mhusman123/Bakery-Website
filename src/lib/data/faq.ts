@@ -45,7 +45,7 @@ export const MOCK_FAQS: FAQItem[] = [
   {
     id: 'faq-7',
     question: 'Can I order custom box mixes or party catering in Quetta?',
-    answer: 'Absolutely! You can choose custom single, box of 6, or box of 12 donut assortments. For large wedding or corporate events in Quetta, contact us via WhatsApp (+92 333 7819021).',
+    answer: 'Absolutely! You can choose custom single, box of 6, or box of 12 donut assortments. For large wedding or corporate events in Quetta, contact us via WhatsApp (03048844719).',
     category: 'custom'
   }
 ];

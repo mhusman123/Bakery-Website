@@ -73,7 +73,7 @@ export const PaymentMethod: React.FC<PaymentMethodProps> = ({ value, onChange })
           <p className="font-bold flex items-center gap-1">
             <CheckCircle2 className="w-4 h-4 text-amber-700" /> Mobile Wallet Instructions:
           </p>
-          <p>Send order total to <strong>JazzCash / EasyPaisa Account: +92 333 7819021 (Porto&apos;s Bakery)</strong>. Keep your transaction reference number ready upon delivery.</p>
+          <p>Send order total to <strong>JazzCash / EasyPaisa Account: 03048844719 (Porto&apos;s Bakery)</strong>. Keep your transaction reference number ready upon delivery.</p>
         </div>
       )}
 
