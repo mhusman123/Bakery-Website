@@ -18,6 +18,7 @@ import { ArrowRight, MapPin, Sparkles, Star, Award, Clock } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     // Detect OS prefers-reduced-motion setting for accessibility
@@ -26,8 +27,22 @@ export const Hero: React.FC = () => {
 
     const handleChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener('change', handleChange);
+
+    // Force video playback & loop trigger
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
+
+  const handleVideoEnded = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
+  };
 
   return (
     <section className="relative w-full min-h-[calc(100vh-80px)] lg:h-[88vh] flex items-center justify-center overflow-hidden bg-stone-950">
@@ -36,10 +51,12 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         {!prefersReducedMotion ? (
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
+            onEnded={handleVideoEnded}
             poster="/images/hero/hero-fallback.jpg"
             className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-95"
           >

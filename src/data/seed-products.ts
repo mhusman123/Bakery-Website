@@ -48,8 +48,8 @@ export const MOCK_PRODUCTS: Product[] = [
     price: 320,
     category: 'donuts',
     images: [
-      'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=800&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=1000&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1000&auto=format&fit=crop'
     ],
     rating: 4.9,
     reviewCount: 142,
@@ -431,5 +431,197 @@ export const MOCK_PRODUCTS: Product[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'p-13',
+    slug: 'pistachio-rocher-crunch-cake',
+    name: 'Pistachio Rocher Crunch Cake',
+    tagline: 'Balochistan pistachio cream with white chocolate rocher crunch (2 Lbs).',
+    description: 'A masterpiece celebration cake. Soft pistachio-infused sponge layers with crushed Balochistan roasted pistachios, white chocolate ganache, and edible gold dust.',
+    price: 2650,
+    category: 'cakes',
+    images: [
+      'https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.97,
+    reviewCount: 62,
+    isBestseller: true,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 45,
+    calories: 1420,
+    ingredients: ['Balochistan Pistachios', 'White Belgian Chocolate', 'Pure Butter', 'Vanilla Paste'],
+    customizations: [
+      {
+        id: 'cake-weight',
+        title: 'Select Cake Size',
+        type: 'radio',
+        options: [
+          { id: '2lbs', name: '2 Lbs (Serves 6-8)', priceModifier: 0, popular: true },
+          { id: '4lbs', name: '4 Lbs (Serves 12-16)', priceModifier: 2400 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-14',
+    slug: 'mango-passion-fruit-supreme-cake',
+    name: 'Mango Passion Fruit Supreme Cake',
+    tagline: 'Tropical mango mousse layer cake with fresh fruit glaze (2 Lbs).',
+    description: 'Light, refreshing summer delight. Layers of moist vanilla chiffon cake filled with organic mango passionfruit pulp and whipped cream frosting.',
+    price: 2350,
+    category: 'cakes',
+    images: [
+      'https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.92,
+    reviewCount: 48,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 40,
+    calories: 1290,
+    ingredients: ['Fresh Mango Puree', 'Passion Fruit Glaze', 'Chiffon Sponge', 'Heavy Cream'],
+    customizations: []
+  },
+  {
+    id: 'p-15',
+    slug: 'salted-caramel-lotus-donut',
+    name: 'Salted Caramel Lotus Donut',
+    tagline: 'Warm acacia caramel glaze with sea salt flake & Biscoff crunch.',
+    description: 'Golden fried donut glazed in house-made salted butter caramel, drizzled with warm Lotus cookie spread and flaky Himalayan pink salt.',
+    price: 330,
+    category: 'donuts',
+    images: [
+      'https://images.unsplash.com/photo-1626094309830-abbb0c99da4a?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.89,
+    reviewCount: 94,
+    isBestseller: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 12,
+    calories: 395,
+    ingredients: ['Wheat Flour', 'Salted Butter Caramel', 'Sea Salt Flakes', 'Lotus Spread'],
+    customizations: [
+      {
+        id: 'box-size',
+        title: 'Select Box Quantity',
+        type: 'radio',
+        options: [
+          { id: 'single', name: 'Single Donut', priceModifier: 0 },
+          { id: 'box-6', name: 'Box of 6 (Save 10%)', priceModifier: 1450, popular: true },
+          { id: 'box-12', name: 'Box of 12 (Save 20%)', priceModifier: 2700 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-16',
+    slug: 'hazelnut-nutella-bomb-donut',
+    name: 'Hazelnut Nutella Bomb Donut',
+    tagline: 'Exploding Nutella center covered in dark cocoa sugar.',
+    description: 'Every bite bursts with creamy Nutella! Overfilled with 60 grams of warm cocoa hazelnut spread and tossed in cinnamon cocoa sugar.',
+    price: 350,
+    category: 'donuts',
+    images: [
+      'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.96,
+    reviewCount: 182,
+    isBestseller: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 15,
+    calories: 430,
+    ingredients: ['Nutella Hazelnut Spread', 'Flour', 'Cocoa Powder', 'Cinnamon Sugar'],
+    customizations: []
+  },
+  {
+    id: 'p-17',
+    slug: 'blueberry-cream-cheese-danish',
+    name: 'Blueberry Cream Cheese Danish',
+    tagline: 'Crisp laminated pastry with wild blueberry jam & sweet cream cheese.',
+    description: 'Multi-layered square puff pastry centered with sweet Philadelphia cream cheese and wild blueberry compote baked to a crisp golden finish.',
+    price: 310,
+    category: 'pastries',
+    images: [
+      'https://images.unsplash.com/photo-1612203985729-70726954388c?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.88,
+    reviewCount: 57,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 8,
+    calories: 360,
+    ingredients: ['Wild Blueberry Jam', 'Cream Cheese', 'Laminated Puff Dough', 'Butter'],
+    customizations: []
+  },
+  {
+    id: 'p-18',
+    slug: 'cinnamon-apple-turnover',
+    name: 'Cinnamon Apple Flaky Turnover',
+    tagline: 'Warm spiced caramelized apples folded in crisp butter puff pastry.',
+    description: 'Fresh local apples slow-cooked in brown sugar, cinnamon, and nutmeg, wrapped in paper-thin buttery pastry crusts and dusted with icing sugar.',
+    price: 295,
+    category: 'pastries',
+    images: [
+      'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.84,
+    reviewCount: 42,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 8,
+    calories: 330,
+    ingredients: ['Local Quetta Apples', 'Ceylon Cinnamon', 'Brown Sugar', 'Butter Puff Pastry'],
+    customizations: []
+  },
+  {
+    id: 'p-19',
+    slug: 'tiramisu-mascarpone-slice-cake',
+    name: 'Tiramisu Mascarpone Slice Cake',
+    tagline: 'Espresso-soaked ladyfinger sponge with light mascarpone mousse.',
+    description: 'Authentic Italian classic recipe. Espresso coffee soaked cake layers filled with light mascarpone cheese cream and dusted with Dutch cocoa powder.',
+    price: 650,
+    category: 'cakes',
+    images: [
+      'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.94,
+    reviewCount: 86,
+    isBestseller: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 10,
+    calories: 450,
+    ingredients: ['Italian Espresso', 'Mascarpone Cheese', 'Ladyfinger Biscuits', 'Cocoa Powder'],
+    customizations: []
+  },
+  {
+    id: 'p-20',
+    slug: 'quetta-saffron-pistachio-milkshake',
+    name: 'Quetta Saffron Pistachio Milkshake',
+    tagline: 'Thick whole milk shake blended with pure saffron threads & pistachios.',
+    description: 'A luxurious cold beverage! Whole milk blended with roasted Balochistan pistachios, cracked green cardamom, vanilla ice cream, and topped with real saffron strands.',
+    price: 450,
+    category: 'beverages',
+    images: [
+      'https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop'
+    ],
+    rating: 4.97,
+    reviewCount: 135,
+    isBestseller: true,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 5,
+    calories: 380,
+    ingredients: ['Pure Saffron Threads', 'Balochistan Pistachios', 'Vanilla Ice Cream', 'Whole Milk', 'Cardamom'],
+    customizations: []
   }
 ];
