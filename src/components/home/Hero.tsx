@@ -37,14 +37,6 @@ export const Hero: React.FC = () => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  const handleTimeUpdate = () => {
-    // Cut video at 2.0 seconds to show ONLY the starting 3 glasses scene and remove the rest of the video
-    if (videoRef.current && videoRef.current.currentTime >= 2.0) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
-    }
-  };
-
   const handleVideoEnded = () => {
     if (videoRef.current) {
       videoRef.current.currentTime = 0;
@@ -64,7 +56,6 @@ export const Hero: React.FC = () => {
             muted
             loop
             playsInline
-            onTimeUpdate={handleTimeUpdate}
             onEnded={handleVideoEnded}
             poster="/images/hero/hero-fallback.jpg"
             className="absolute inset-0 w-full h-full object-cover scale-105 filter brightness-95"
