@@ -15,6 +15,7 @@ export const Header: React.FC = () => {
   
   const toggleCartDrawer = useUIStore(s => s.toggleCartDrawer);
   const openMobileNav = useUIStore(s => s.openMobileNav);
+  const isMobileNavOpen = useUIStore(s => s.isMobileNavOpen);
   const itemCount = useCartStore(s => s.getItemCount());
 
   useEffect(() => {
@@ -27,8 +28,8 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // When on homepage and at top of the page, header is transparent
-  const isTransparent = isHome && !isScrolled;
+  // When on homepage, at top of the page, and mobile drawer is closed, header is transparent
+  const isTransparent = isHome && !isScrolled && !isMobileNavOpen;
 
   return (
     <header
@@ -44,7 +45,7 @@ export const Header: React.FC = () => {
       <div
         className={`text-xs py-1.5 px-4 text-center font-medium transition-colors duration-300 flex items-center justify-center gap-3 ${
           isTransparent
-            ? 'bg-black/35 backdrop-blur-xs text-amber-200/90 border-b border-white/10'
+            ? 'bg-black/30 backdrop-blur-xs text-amber-200/90 border-b border-white/10'
             : 'bg-stone-900 text-amber-100'
         }`}
       >
@@ -70,52 +71,55 @@ export const Header: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
-          {/* Mobile menu trigger */}
-          <button
-            onClick={openMobileNav}
-            className={`lg:hidden p-2 rounded-xl transition-all cursor-pointer ${
-              isTransparent
-                ? 'text-white hover:text-amber-300 hover:bg-white/15'
-                : 'text-stone-700 hover:text-amber-700 hover:bg-stone-100'
-            }`}
-            aria-label="Toggle navigation menu"
-          >
-            <MenuIcon className="w-6 h-6" />
-          </button>
+          {/* Left section: Mobile menu trigger & Brand Logo */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Mobile menu trigger with 44x44px tap target & circular backdrop on transparent */}
+            <button
+              onClick={openMobileNav}
+              className={`lg:hidden w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer active:scale-95 ${
+                isTransparent
+                  ? 'bg-black/25 hover:bg-black/35 active:bg-black/40 text-white backdrop-blur-xs shadow-xs'
+                  : 'bg-transparent hover:bg-stone-100 active:bg-stone-200 text-stone-800 hover:text-amber-700'
+              }`}
+              aria-label="Toggle navigation menu"
+            >
+              <MenuIcon className={`w-5 h-5 transition-transform stroke-[2.2] ${isTransparent ? 'drop-shadow-xs' : ''}`} />
+            </button>
 
-          {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl overflow-hidden shadow-sm shadow-amber-950/20 group-hover:scale-105 transition-transform shrink-0 border border-amber-200/60 bg-white">
-              <Image
-                src="/images/logo.png"
-                alt="Porto's Bakery Logo"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
+            {/* Brand Logo */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl overflow-hidden shadow-sm shadow-amber-950/20 group-hover:scale-105 transition-transform shrink-0 border border-amber-200/60 bg-white">
+                <Image
+                  src="/images/logo.png"
+                  alt="Porto's Bakery Logo"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-1.5">
+                  <span
+                    className={`text-xl sm:text-2xl font-black tracking-tight font-display transition-colors duration-300 ${
+                      isTransparent ? 'text-white drop-shadow-md' : 'text-stone-900'
+                    }`}
+                  >
+                    PORTO&apos;S
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full shadow-2xs">
+                    DONUTS
+                  </span>
+                </div>
                 <span
-                  className={`text-xl sm:text-2xl font-black tracking-tight font-display transition-colors duration-300 ${
-                    isTransparent ? 'text-white drop-shadow-md' : 'text-stone-900'
+                  className={`block text-[10px] font-semibold tracking-wider uppercase -mt-0.5 transition-colors duration-300 ${
+                    isTransparent ? 'text-amber-200/90 drop-shadow-xs' : 'text-stone-500'
                   }`}
                 >
-                  PORTO&apos;S
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full shadow-2xs">
-                  DONUTS
+                  Quetta • Artisanal Bakery
                 </span>
               </div>
-              <span
-                className={`block text-[10px] font-semibold tracking-wider uppercase -mt-0.5 transition-colors duration-300 ${
-                  isTransparent ? 'text-amber-200/90 drop-shadow-xs' : 'text-stone-500'
-                }`}
-              >
-                Quetta • Artisanal Bakery
-              </span>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
           {/* Desktop Navigation Links */}
           <nav
@@ -174,31 +178,33 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Action Icons (Search & Cart) */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            
+            {/* Search Button with 44x44px tap target & circular backdrop on transparent */}
             <Link
               href="/menu"
-              className={`p-2.5 rounded-full transition-all cursor-pointer hidden sm:flex items-center gap-1.5 text-xs font-medium ${
+              className={`w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer active:scale-95 ${
                 isTransparent
-                  ? 'text-white hover:text-amber-300 hover:bg-white/15'
-                  : 'text-stone-700 hover:text-amber-700 hover:bg-amber-50'
+                  ? 'bg-black/25 hover:bg-black/35 active:bg-black/40 text-white backdrop-blur-xs shadow-xs'
+                  : 'bg-transparent hover:bg-amber-50 active:bg-amber-100 text-stone-700 hover:text-amber-700'
               }`}
               title="Search bakery menu"
+              aria-label="Search bakery menu"
             >
-              <Search className="w-5 h-5" />
-              <span className="hidden md:inline">Search</span>
+              <Search className={`w-5 h-5 stroke-[2.2] ${isTransparent ? 'drop-shadow-xs' : ''}`} />
             </Link>
 
-            {/* Cart Button with Count Badge - Solid filled in both states */}
+            {/* Cart Button with Count Badge - Solid filled in both states, 44px min height */}
             <button
               onClick={toggleCartDrawer}
-              className={`relative flex items-center gap-2 px-4 py-2.5 rounded-full transition-all active:scale-95 cursor-pointer font-bold ${
+              className={`relative min-h-[44px] flex items-center gap-2 px-4 py-2.5 rounded-full transition-all duration-300 active:scale-95 cursor-pointer font-bold ${
                 isTransparent
                   ? 'bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-600/30'
                   : 'bg-stone-900 hover:bg-stone-800 text-amber-50 shadow-md shadow-stone-950/10'
               }`}
               aria-label="Open Shopping Cart"
             >
-              <ShoppingBag className="w-4 h-4 text-amber-300" />
+              <ShoppingBag className="w-4 h-4 text-amber-300 stroke-[2.2]" />
               <span className="text-xs font-bold hidden sm:inline">Cart</span>
               {itemCount > 0 && (
                 <span className="bg-amber-400 text-stone-950 font-black text-[11px] min-w-[20px] h-[20px] rounded-full flex items-center justify-center px-1 animate-pulse shadow-xs">
