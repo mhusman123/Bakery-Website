@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[calc(100vh-80px)] lg:h-[88vh] flex items-center justify-center overflow-hidden bg-stone-950">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-stone-950 pt-24 sm:pt-28 pb-16">
       
       {/* Background Video & Fallback Poster Container */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -85,7 +85,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Layered Content Overlay */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white space-y-6">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center text-white space-y-6">
         
         {/* Quetta Location & Express Badge */}
         <motion.div
@@ -122,7 +122,7 @@ export const Hero: React.FC = () => {
           className="space-y-2 max-w-2xl mx-auto"
         >
           <p className="text-amber-300 font-bold uppercase tracking-widest text-xs sm:text-sm">
-            ✦ Since 2019 • Jinnah Town, Quetta ✦
+            ✦ Since 2019 • Shahbaz Town, Quetta ✦
           </p>
           <p className="text-stone-200 text-base sm:text-lg font-normal leading-relaxed drop-shadow-sm">
             Hand-dipped Belgian chocolate glazes, roasted Balochistan pistachios, flaky French butter croissants & specialty cold brews — baked fresh every morning at 7:30 AM.

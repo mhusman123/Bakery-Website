@@ -31,7 +31,7 @@ export default function AboutPage() {
               Baked Fresh Every Morning at 7:30 AM
             </h2>
             <p className="text-sm text-stone-600 leading-relaxed">
-              Porto&apos;s Donuts Bakery was founded with a single mission: to redefine sweet treats in Balochistan. Located in Jinnah Town, Quetta, our master bakers combine authentic European laminating techniques with locally sourced raw milk, organic cardamom, and premium imported Belgian chocolate.
+              Porto&apos;s Donuts Bakery was founded with a single mission: to redefine sweet treats in Balochistan. Located in Shop No 2, Shahbaz Town, Quetta, our master bakers combine authentic European laminating techniques with locally sourced raw milk, organic cardamom, and premium imported Belgian chocolate.
             </p>
             <p className="text-sm text-stone-600 leading-relaxed">
               Unlike commercial chains that freeze dough, every single donut ring in our kitchen is proofed naturally, fried to golden perfection, and hand-dipped in warm silky glazes right before express delivery.

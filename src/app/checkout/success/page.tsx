@@ -52,7 +52,7 @@ function OrderSuccessContent() {
       </h1>
 
       <p className="text-sm text-stone-600 max-w-md mx-auto mt-2">
-        Your gourmet donuts & bakery items are now being hand-glazed in our Jinnah Town kitchen.
+        Your gourmet donuts & bakery items are now being hand-glazed in our Shahbaz Town kitchen.
       </p>
 
       {/* Order Info Card */}

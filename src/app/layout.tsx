@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Porto's Donuts Bakery — Fresh Gourmet Donuts in Quetta",
   description: "Quetta's premier artisanal bakery. Order fresh gourmet donuts, Belgian chocolate cakes, French butter croissants & craft beverages with express delivery across Quetta city.",
-  keywords: ["Porto's Donuts", "Quetta Bakery", "Donuts Quetta", "Fresh Donuts Quetta", "Cakes Quetta", "Jinnah Town Bakery"],
+  keywords: ["Porto's Donuts", "Quetta Bakery", "Donuts Quetta", "Fresh Donuts Quetta", "Cakes Quetta", "Shahbaz Town Bakery"],
   authors: [{ name: "Porto's Donuts Bakery Quetta" }],
   openGraph: {
     title: "Porto's Donuts Bakery — Quetta, Pakistan",

@@ -86,7 +86,7 @@ export const MobileNav: React.FC = () => {
               <div className="pt-6 border-t border-stone-800 space-y-3 text-xs text-stone-400">
                 <div className="flex items-center gap-2 text-amber-300">
                   <MapPin className="w-4 h-4 shrink-0 text-amber-400" />
-                  <span>Jinnah Town Main Blvd, Quetta</span>
+                  <span>Shop No 2, Shahbaz Town, Quetta</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0 text-amber-400" />

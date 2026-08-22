@@ -20,7 +20,7 @@ import { QUETTA_DELIVERY_ZONES, ESTIMATED_DELIVERY_MINS } from '@/lib/deliveryZo
 
 export const metadata: Metadata = {
   title: "Locations & Quetta Store | Porto's Donuts Bakery",
-  description: "Visit Porto's Donuts Bakery in Jinnah Town, Quetta. Order fresh gourmet donuts, artisan cakes, and pastries for express delivery or store pickup.",
+  description: "Visit Porto's Donuts Bakery at Shop No 2, Shahbaz Town, Near Agha Pharmacy, Quetta. Order fresh gourmet donuts, artisan cakes, and pastries for express delivery or store pickup.",
 };
 
 export default function LocationsPage() {
@@ -87,7 +87,7 @@ export default function LocationsPage() {
                 Order for Pickup
               </h2>
               <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-                Skip the wait — order ahead online and pick up your fresh order in-store at Jinnah Town, Quetta.
+                Skip the wait — order ahead online and pick up your fresh order in-store at Shop No 2, Shahbaz Town, Quetta.
               </p>
             </div>
 
@@ -285,7 +285,7 @@ export default function LocationsPage() {
           {/* Embedded Google Map */}
           <div className="border-t border-stone-200 bg-stone-100">
             <div className="px-6 py-3 bg-stone-100 text-xs font-semibold text-stone-500 uppercase tracking-wider flex items-center justify-between border-b border-stone-200">
-              <span>Interactive Store Map • Jinnah Town, Quetta</span>
+              <span>Interactive Store Map • Shop No 2, Shahbaz Town, Quetta</span>
               <a 
                 href={QUETTA_MAIN_LOCATION.googleMapsUrl} 
                 target="_blank" 

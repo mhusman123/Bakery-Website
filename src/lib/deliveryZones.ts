@@ -2,7 +2,7 @@ export const QUETTA_BAKERY_LOCATION = {
   city: "Quetta",
   province: "Balochistan",
   country: "Pakistan",
-  address: "Plot 14-B, Jinnah Town Main Boulevard, Near Serena Gate, Quetta",
+  address: "Shop No 2, Shahbaz Town, Near Agha Pharmacy, Quetta",
   phone: "+92 304 8844719",
   whatsapp: "+923048844719",
   whatsappDisplay: "+92 304 8844719",

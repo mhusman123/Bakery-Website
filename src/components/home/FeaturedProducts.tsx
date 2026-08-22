@@ -25,7 +25,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ products }) 
               Bestselling Donuts & Treats
             </h2>
             <p className="text-sm text-stone-500 mt-1 max-w-lg">
-              Handcrafted every morning in our Jinnah Town bakery kitchen using raw local milk & imported Belgian cocoa.
+              Handcrafted every morning in our Shahbaz Town bakery kitchen using raw local milk & imported Belgian cocoa.
             </p>
           </div>
 

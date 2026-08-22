@@ -15,7 +15,7 @@ export const MOCK_FAQS: FAQItem[] = [
   {
     id: 'faq-2',
     question: 'How fast is delivery after placing an order?',
-    answer: 'Standard fresh box delivery takes approximately 35 to 45 minutes depending on your Quetta location. All donuts and pastries are packed fresh directly from our Jinnah Town kitchen upon order confirmation.',
+    answer: 'Standard fresh box delivery takes approximately 35 to 45 minutes depending on your Quetta location. All donuts and pastries are packed fresh directly from our Shahbaz Town kitchen upon order confirmation.',
     category: 'delivery'
   },
   {
