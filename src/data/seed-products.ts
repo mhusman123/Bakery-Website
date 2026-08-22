@@ -623,5 +623,464 @@ export const MOCK_PRODUCTS: Product[] = [
     calories: 380,
     ingredients: ['Pure Saffron Threads', 'Balochistan Pistachios', 'Vanilla Ice Cream', 'Whole Milk', 'Cardamom'],
     customizations: []
+  },
+  {
+    id: 'p-21',
+    slug: 'mediterranean-orange-rosemary-cake',
+    name: 'Mediterranean Orange Rosemary Olive Oil Cake',
+    tagline: 'Citrus-infused chiffon sponge with aromatic rosemary & orange zest glaze (2 Lbs).',
+    description: 'A rustic gourmet masterpiece inspired by European Mediterranean bakeries. Infused with fresh orange pulp, cold-pressed olive oil, cracked rosemary leaves, and finished with a sticky candied orange glaze.',
+    price: 2450,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/34941734/pexels-photo-34941734.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.93,
+    reviewCount: 41,
+    isBestseller: true,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 40,
+    calories: 1280,
+    ingredients: ['Fresh Quetta Oranges', 'Fresh Rosemary Leaves', 'Extra Virgin Olive Oil', 'Chiffon Sponge', 'Citrus Glaze'],
+    customizations: [
+      {
+        id: 'cake-weight',
+        title: 'Select Cake Size',
+        type: 'radio',
+        options: [
+          { id: '2lbs', name: '2 Lbs (Serves 6-8)', priceModifier: 0, popular: true },
+          { id: '4lbs', name: '4 Lbs (Serves 12-16)', priceModifier: 2200 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-22',
+    slug: 'royal-white-pearl-wedding-cake',
+    name: 'Royal White Pearl Floral Wedding Cake',
+    tagline: '3-tier celebration masterpiece with Swiss meringue buttercream & edible pearls (4 Lbs).',
+    description: 'Bespoke grand celebration cake designed for weddings, engagements, and momentous milestones. Moist Tahitian vanilla sponge layered with white Belgian chocolate mousse and draped in silky ivory buttercream.',
+    price: 5500,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/7711168/pexels-photo-7711168.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.99,
+    reviewCount: 29,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 120,
+    calories: 2400,
+    ingredients: ['Tahitian Vanilla Beans', 'White Belgian Chocolate', 'Swiss Meringue Buttercream', 'Edible Fondant Pearls'],
+    customizations: [
+      {
+        id: 'cake-size',
+        title: 'Select Tier Size',
+        type: 'radio',
+        options: [
+          { id: '4lbs', name: '4 Lbs (2 Tiers - Serves 15-20)', priceModifier: 0, popular: true },
+          { id: '6lbs', name: '6 Lbs (3 Tiers - Serves 25-30)', priceModifier: 3000 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-23',
+    slug: 'portos-morning-bakers-platter',
+    name: 'Porto\'s Artisanal Morning Baker\'s Platter',
+    tagline: 'Chef\'s selection of 6 fresh baked butter croissants, fruit danishes & cinnamon brioche.',
+    description: 'The ultimate breakfast spread for family mornings and office meetings. Freshly pulled from our ovens at 7:30 AM every morning with flaky laminated layers and European butter.',
+    price: 1850,
+    category: 'pastries',
+    images: [
+      'https://images.pexels.com/photos/37313800/pexels-photo-37313800.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.95,
+    reviewCount: 78,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 20,
+    calories: 950,
+    ingredients: ['French Cultured Butter', 'Laminated Puff Dough', 'Wild Fruit Glazes', 'Cinnamon Brioche'],
+    customizations: []
+  },
+  {
+    id: 'p-24',
+    slug: 'glazed-citrus-orange-blossom-pastry',
+    name: 'Glazed Citrus Orange Blossom Pastry',
+    tagline: 'Flaky golden pastry rosette crowned with candied orange wheel & blossom syrup.',
+    description: 'Crisp caramelized puff pastry filled with orange curd cream and crowned with a slow-candied orange slice steeped in pure orange blossom essence.',
+    price: 340,
+    category: 'pastries',
+    images: [
+      'https://images.pexels.com/photos/34569681/pexels-photo-34569681.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.88,
+    reviewCount: 36,
+    isBestseller: false,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 10,
+    calories: 320,
+    ingredients: ['Candied Oranges', 'Orange Blossom Essence', 'Laminated Butter Pastry', 'Honey Glaze'],
+    customizations: []
+  },
+  {
+    id: 'p-25',
+    slug: 'grand-celebration-dessert-table-cake',
+    name: 'Grand Celebration Cake & Mini Dessert Table',
+    tagline: 'Luxury centerpiece celebration cake with matching assortment of dessert cups (3.5 Lbs).',
+    description: 'Make your party unforgettable with our coordinated dessert table package. Includes a handcrafted 3.5 Lbs celebration cake paired with mini mousse shots and chocolate macarons.',
+    price: 4800,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/5610386/pexels-photo-5610386.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.96,
+    reviewCount: 22,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 90,
+    calories: 2100,
+    ingredients: ['Madagascar Vanilla', 'Belgian Chocolate Ganache', 'Fresh Seasonal Berries', 'Almond Dacquoise'],
+    customizations: []
+  },
+  {
+    id: 'p-26',
+    slug: 'dino-adventure-kids-birthday-cake',
+    name: 'Dino Adventure Kids Birthday Cake',
+    tagline: 'Playful layered chocolate-fudge cake with handcrafted dinosaur toppers (2.5 Lbs).',
+    description: 'The dream cake for young adventurers! Ultra-soft chocolate fudge cake frosted in vibrant jungle green buttercream with edible sugar-paste dinosaurs and chocolate boulder rocks.',
+    price: 2800,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/32761037/pexels-photo-32761037.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.94,
+    reviewCount: 53,
+    isBestseller: true,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 50,
+    calories: 1650,
+    ingredients: ['Dark Cocoa Sponge', 'Fudge Buttercream', 'Marshmallow Fondant', 'Rainbow Sugar Sprinkles'],
+    customizations: [
+      {
+        id: 'cake-weight',
+        title: 'Select Cake Size',
+        type: 'radio',
+        options: [
+          { id: '2.5lbs', name: '2.5 Lbs (Serves 8-10)', priceModifier: 0, popular: true },
+          { id: '4.5lbs', name: '4.5 Lbs (Serves 15-18)', priceModifier: 2000 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-27',
+    slug: 'european-handcrafted-mini-cakes-trio',
+    name: 'European Handcrafted Mini Cakes Trio',
+    tagline: 'Trio of miniature gourmet cakes: Black Forest, Tiramisu, and Berry Chantilly.',
+    description: 'Why settle for one flavor? Enjoy an artisan platter of 3 individually decorated miniature sponge cakes crafted with Belgian cocoa, Italian mascarpone, and fresh berry glazes.',
+    price: 1650,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/33846218/pexels-photo-33846218.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.91,
+    reviewCount: 38,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 25,
+    calories: 890,
+    ingredients: ['Dutch Cocoa', 'Mascarpone Cream', 'Morello Cherries', 'Espresso Soak', 'Chantilly Cream'],
+    customizations: []
+  },
+  {
+    id: 'p-28',
+    slug: 'sweetheart-red-velvet-berry-cake',
+    name: 'Sweetheart Red Velvet Berry Cake',
+    tagline: 'Heart-shaped red velvet sponge layered with cream cheese & fresh strawberries (2 Lbs).',
+    description: 'Our most romantic creation. Velvety crimson sponge cake paired with tangy Philadelphia cream cheese frosting, decorated with heart motifs and fresh garden strawberries.',
+    price: 2550,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/38774006/pexels-photo-38774006.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.98,
+    reviewCount: 97,
+    isBestseller: true,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 45,
+    calories: 1350,
+    ingredients: ['Red Cocoa Sponge', 'Philadelphia Cream Cheese', 'Fresh Strawberries', 'Raspberry Coulis'],
+    customizations: []
+  },
+  {
+    id: 'p-29',
+    slug: 'carnival-fiesta-brigadeiro-cake',
+    name: 'Carnival Fiesta Brigadeiro Birthday Cake',
+    tagline: 'Rich Brazilian chocolate fudge cake coated in decadent chocolate sprinkles (2.5 Lbs).',
+    description: 'Bursting with festive energy! Slow-cooked condensed milk fudge (Brigadeiro) filled between rich chocolate cake layers and showered with crunchy gourmet chocolate sprinkles.',
+    price: 2750,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/30464369/pexels-photo-30464369.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.92,
+    reviewCount: 46,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 45,
+    calories: 1580,
+    ingredients: ['Sweetened Condensed Milk', 'Dark Cocoa Powder', 'Gourmet Chocolate Sprinkles', 'Moist Chocolate Chiffon'],
+    customizations: []
+  },
+  {
+    id: 'p-30',
+    slug: 'festive-celebration-golden-drip-cake',
+    name: 'Festive Celebration Golden Drip Cake',
+    tagline: 'Multi-layered caramel sponge with warm butterscotch drip & almond macarons (2.5 Lbs).',
+    description: 'A showstopper for milestone celebrations. Golden vanilla sponge filled with salted caramel buttercream, crowned with a glossy caramel drip, and adorned with delicate French macarons.',
+    price: 3200,
+    category: 'cakes',
+    images: [
+      'https://images.pexels.com/photos/30464364/pexels-photo-30464364.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.95,
+    reviewCount: 64,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 60,
+    calories: 1720,
+    ingredients: ['Butterscotch Drip', 'Almond Macarons', 'Caramel Buttercream', 'Golden Chiffon Sponge'],
+    customizations: []
+  },
+  {
+    id: 'p-31',
+    slug: 'portos-bakers-dozen-donut-box',
+    name: 'Porto\'s Baker\'s Dozen Assorted Donut Box',
+    tagline: 'A showcase box of 12 signature handcrafted donuts across 6 unique gourmet glazes.',
+    description: 'The ultimate sharing box. Includes 2 Hazelnut Rochers, 2 Lotus Biscoff, 2 Belgian Chocolate Crunch, 2 Rainbow Sprinkles, 2 Strawberry Glaze, and 2 Powdered Beignets in an insulated gift box.',
+    price: 2650,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/34491951/pexels-photo-34491951.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.99,
+    reviewCount: 215,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 15,
+    calories: 3600,
+    ingredients: ['Enriched Wheat Flour', 'Belgian Chocolate', 'Lotus Biscoff', 'Pistachio Crunch', 'Caramel Glaze'],
+    customizations: []
+  },
+  {
+    id: 'p-32',
+    slug: 'rainbow-sprinkles-confetti-donut',
+    name: 'Rainbow Sprinkles Confetti Glaze Donut',
+    tagline: 'Classic vanilla glazed yeast ring loaded with crunchy festive rainbow confetti.',
+    description: 'An all-time timeless crowd favorite! Fluffy, 24-hour fermented brioche yeast ring hand-dipped in sweet vanilla glaze and generously showered with colorful crunchy sugar sprinkles.',
+    price: 290,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/3338681/pexels-photo-3338681.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.87,
+    reviewCount: 112,
+    isBestseller: true,
+    isNew: false,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 10,
+    calories: 310,
+    ingredients: ['Pure Vanilla Glaze', 'Rainbow Sugar Confetti', 'Pillow Soft Yeast Dough', 'Butter'],
+    customizations: [
+      {
+        id: 'box-size',
+        title: 'Select Box Quantity',
+        type: 'radio',
+        options: [
+          { id: 'single', name: 'Single Donut', priceModifier: 0 },
+          { id: 'box-6', name: 'Box of 6 (Save 10%)', priceModifier: 1300, popular: true },
+          { id: 'box-12', name: 'Box of 12 (Save 20%)', priceModifier: 2400 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-33',
+    slug: 'pastel-fantasy-glazed-donut-trio',
+    name: 'Pastel Fantasy Glazed Donut Trio',
+    tagline: 'Pack of 3 vibrant donuts in Blueberry Sky, Strawberry Cream & Lavender Glaze.',
+    description: 'Brighten up your day with this photogenic trio of pastel-glazed donuts. Made with natural fruit extracts and silky sugar glazes over golden fried yeast dough rings.',
+    price: 850,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/7034520/pexels-photo-7034520.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.91,
+    reviewCount: 73,
+    isBestseller: false,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 12,
+    calories: 890,
+    ingredients: ['Wild Berry Glaze', 'Strawberry Puree', 'Lavender Sugar', 'Brioche Yeast Dough'],
+    customizations: []
+  },
+  {
+    id: 'p-34',
+    slug: 'artisan-gourmet-ring-donuts-platter',
+    name: 'Artisan Gourmet Ring Donuts Ceramic Platter',
+    tagline: 'Platter of 4 hand-glazed ring donuts featuring dark chocolate drizzle & cookie crumbles.',
+    description: 'Four distinct artisanal flavor profiles crafted for true donut connoisseurs. Featuring 70% dark Belgian chocolate ganache, toasted almonds, cookie crunch, and caramel drizzle.',
+    price: 1350,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/9582083/pexels-photo-9582083.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.96,
+    reviewCount: 89,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 15,
+    calories: 1240,
+    ingredients: ['Dark Belgian Chocolate 70%', 'Cookie Crumbles', 'White Chocolate Drizzle', 'Roasted Almonds'],
+    customizations: []
+  },
+  {
+    id: 'p-35',
+    slug: 'old-fashioned-powdered-sugar-donuts',
+    name: 'Old-Fashioned Powdered Sugar Beignets & Donuts',
+    tagline: 'Light-as-air golden donuts dusted in a heavy snow of French powdered sugar.',
+    description: 'Simplicity perfected. Fluffy, melt-in-your-mouth yeast dough fried to crisp golden perfection and coated in aromatic vanilla confectioners sugar while still piping warm.',
+    price: 270,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/39081554/pexels-photo-39081554.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.89,
+    reviewCount: 104,
+    isBestseller: false,
+    isNew: true,
+    isEggless: true,
+    isHalal: true,
+    prepTimeMinutes: 8,
+    calories: 280,
+    ingredients: ['French Confectioners Sugar', 'Vanilla Butter Yeast Dough', 'Nutmeg Essence'],
+    customizations: [
+      {
+        id: 'box-size',
+        title: 'Select Box Quantity',
+        type: 'radio',
+        options: [
+          { id: 'single', name: 'Single Donut', priceModifier: 0 },
+          { id: 'box-6', name: 'Box of 6 (Save 10%)', priceModifier: 1200, popular: true },
+          { id: 'box-12', name: 'Box of 12 (Save 20%)', priceModifier: 2200 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-36',
+    slug: 'wild-raspberry-cream-glaze-donut',
+    name: 'Wild Raspberry Cream Glaze Donut',
+    tagline: 'Hand-dipped ruby glaze topped with fresh tart raspberries & sweet vanilla cream.',
+    description: 'A balance of tart and sweet. Glazed in real raspberry juice reduction, stuffed with silky vanilla diplomat cream, and garnished with plump fresh raspberries.',
+    price: 340,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/7440389/pexels-photo-7440389.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.95,
+    reviewCount: 68,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 12,
+    calories: 340,
+    ingredients: ['Fresh Raspberries', 'Ruby Fruit Glaze', 'Vanilla Pastry Cream', 'Mint Leaf'],
+    customizations: []
+  },
+  {
+    id: 'p-37',
+    slug: 'bavarian-vanilla-custard-bomboloni',
+    name: 'Bavarian Vanilla Custard Bomboloni',
+    tagline: 'Italian sugar-dusted donut bursting with rich Madagascar vanilla custard.',
+    description: 'An authentic hole-less Italian filled donut (Bombolone). Stuffed to capacity with decadent, slow-simmered egg yolk custard infused with real Madagascar vanilla bean caviar.',
+    price: 320,
+    category: 'donuts',
+    images: [
+      'https://images.pexels.com/photos/30922282/pexels-photo-30922282.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.97,
+    reviewCount: 147,
+    isBestseller: true,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 15,
+    calories: 390,
+    ingredients: ['Madagascar Vanilla Custard', 'Fine Sugar Dust', 'Egg-Yolk Brioche Dough', 'Pure Butter'],
+    customizations: [
+      {
+        id: 'box-size',
+        title: 'Select Box Quantity',
+        type: 'radio',
+        options: [
+          { id: 'single', name: 'Single Donut', priceModifier: 0 },
+          { id: 'box-6', name: 'Box of 6 (Save 10%)', priceModifier: 1400, popular: true },
+          { id: 'box-12', name: 'Box of 12 (Save 20%)', priceModifier: 2600 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'p-38',
+    slug: 'dulce-de-leche-caramel-tart',
+    name: 'Dulce de Leche Caramel Custard Tart',
+    tagline: 'Creamy slow-simmered dulce de leche custard set in a crisp buttery shortcrust shell.',
+    description: 'Inspired by traditional Porto\'s Latin bakery desserts. Golden crisp butter pastry tart filled with velvety caramelized milk custard and sprinkled with flaky Maldon sea salt.',
+    price: 380,
+    category: 'pastries',
+    images: [
+      'https://images.pexels.com/photos/20385049/pexels-photo-20385049.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ],
+    rating: 4.94,
+    reviewCount: 52,
+    isBestseller: false,
+    isNew: true,
+    isEggless: false,
+    isHalal: true,
+    prepTimeMinutes: 10,
+    calories: 370,
+    ingredients: ['Dulce de Leche Caramel', 'Shortcrust Butter Shell', 'Sea Salt Flakes', 'Whipped Cream'],
+    customizations: []
   }
 ];
