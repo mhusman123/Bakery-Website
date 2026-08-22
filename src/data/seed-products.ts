@@ -441,7 +441,7 @@ export const MOCK_PRODUCTS: Product[] = [
     price: 2650,
     category: 'cakes',
     images: [
-      'https://images.unsplash.com/photo-1535141192574-5d4897c13136?q=80&w=800&auto=format&fit=crop',
+      'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop'
     ],
     rating: 4.97,
