@@ -65,13 +65,16 @@ export const Footer: React.FC = () => {
                 <Link href="/menu/cakes" className="hover:text-amber-400 transition-colors">Celebration Cakes</Link>
               </li>
               <li>
+                <Link href="/locations" className="hover:text-amber-400 transition-colors">Bakery Locations & Map</Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-amber-400 transition-colors">Our Story & Heritage</Link>
               </li>
               <li>
                 <Link href="/faq" className="hover:text-amber-400 transition-colors">Delivery FAQs</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-amber-400 transition-colors">Quetta Store Location</Link>
+                <Link href="/contact" className="hover:text-amber-400 transition-colors">Contact Us</Link>
               </li>
             </ul>
           </div>

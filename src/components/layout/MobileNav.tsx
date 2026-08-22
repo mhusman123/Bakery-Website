@@ -16,6 +16,7 @@ export const MobileNav: React.FC = () => {
     { label: 'Full Menu', href: '/menu' },
     { label: 'Gourmet Donuts', href: '/menu/donuts' },
     { label: 'Artisan Cakes', href: '/menu/cakes' },
+    { label: 'Bakery Locations', href: '/locations' },
     { label: 'Our Quetta Story', href: '/about' },
     { label: 'FAQs', href: '/faq' },
     { label: 'Contact Us', href: '/contact' },

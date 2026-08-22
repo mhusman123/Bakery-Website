@@ -79,7 +79,7 @@ export const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-stone-700">
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-stone-700">
             <Link href="/" className="hover:text-amber-700 transition-colors">
               Home
             </Link>
@@ -91,6 +91,9 @@ export const Header: React.FC = () => {
             </Link>
             <Link href="/menu/cakes" className="hover:text-amber-700 transition-colors">
               Cakes
+            </Link>
+            <Link href="/locations" className="hover:text-amber-700 transition-colors">
+              Locations
             </Link>
             <Link href="/about" className="hover:text-amber-700 transition-colors">
               Our Story

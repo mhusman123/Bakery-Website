@@ -88,9 +88,9 @@ export const AboutTeaser: React.FC = () => {
                   Read Our Full Story
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/locations">
                 <Button variant="outline" size="lg" className="border-stone-700 text-stone-200 hover:bg-stone-800">
-                  Visit Quetta Store
+                  Store Locations & Map
                 </Button>
               </Link>
             </div>
