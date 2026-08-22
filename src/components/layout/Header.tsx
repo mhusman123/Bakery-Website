@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useUIStore } from '@/store/uiStore';
 import { useCartStore } from '@/store/cartStore';
 import { ShoppingBag, Search, Menu as MenuIcon, MapPin, Sparkles, PhoneCall } from 'lucide-react';
@@ -59,9 +60,15 @@ export const Header: React.FC = () => {
           </button>
 
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-2xl bg-amber-600 flex items-center justify-center text-white font-black text-xl shadow-md shadow-amber-600/30 group-hover:scale-105 transition-transform">
-              🍩
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-2xl overflow-hidden shadow-sm shadow-amber-950/20 group-hover:scale-105 transition-transform shrink-0 border border-amber-200/60 bg-white">
+              <Image
+                src="/images/logo.png"
+                alt="Porto's Bakery Logo"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useUIStore } from '@/store/uiStore';
 import { X, ShoppingBag, Phone, MapPin, Sparkles } from 'lucide-react';
@@ -44,11 +45,19 @@ export const MobileNav: React.FC = () => {
             >
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-stone-800">
-                  <Link href="/" onClick={closeMobileNav} className="flex items-center gap-2">
-                    <span className="text-2xl font-black font-display tracking-tight text-amber-400">
+                  <Link href="/" onClick={closeMobileNav} className="flex items-center gap-2.5">
+                    <div className="relative w-9 h-9 rounded-xl overflow-hidden shadow-sm bg-stone-800 border border-stone-700/80 shrink-0">
+                      <Image
+                        src="/images/logo.png"
+                        alt="Porto's Bakery Logo"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <span className="text-xl font-black font-display tracking-tight text-white">
                       PORTO&apos;S
                     </span>
-                    <span className="text-xs bg-amber-500/20 text-amber-300 font-semibold px-2 py-0.5 rounded-full border border-amber-500/30">
+                    <span className="text-[10px] bg-amber-500/20 text-amber-300 font-bold px-2 py-0.5 rounded-full border border-amber-500/30">
                       Quetta
                     </span>
                   </Link>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { QUETTA_BAKERY_LOCATION, QUETTA_DELIVERY_ZONES } from '@/lib/deliveryZones';
 import { MapPin, Phone, Clock, Mail, Heart, Sparkles, Instagram, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -25,9 +26,14 @@ export const Footer: React.FC = () => {
           
           {/* Brand Info */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-2xl bg-amber-600 flex items-center justify-center text-white font-black text-xl shadow-md">
-                🍩
+            <div className="flex items-center gap-3">
+              <div className="relative w-11 h-11 rounded-2xl overflow-hidden shadow-md bg-stone-800 border border-stone-700/80 shrink-0">
+                <Image
+                  src="/images/logo.png"
+                  alt="Porto's Bakery Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div>
                 <span className="text-2xl font-black tracking-tight text-white font-display">
